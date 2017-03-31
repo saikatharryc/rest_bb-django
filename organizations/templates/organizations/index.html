@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="bower_components/semantic/dist/semantic.min.css">
+    <title>This is organizations Page</title>
+</head>
+
+<body>
+    {% if all_org %}
+    <h1 class="ui header">Here all my organizations...</h1>
+    <ul class="ui list">
+        {% for organization in all_org %}
+        <li><a href="/organizations/{{organization.id}}/">{{ organization.org_name }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h1 class="ui header">You Don't Have any organizations..</h1> {% endif %}
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.css""></script>
+    <script type="text/javascript" src="../bower_components/semantic/dist/semantic.min.js"></script>
+</body>
+
+</html>
